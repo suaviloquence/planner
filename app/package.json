@@ -2,7 +2,7 @@
   "name": "planner-app",
   "version": "0.1.0",
   "description": "frontend for planner app",
-  "main": "bin/index.js",
+  "main": "/bin/echo 'this is a web application'",
   "repository": "https://github.com/suaviloquence/planner",
   "author": "m",
   "license": "AGPL-3.0-only",

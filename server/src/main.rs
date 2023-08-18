@@ -1,24 +1,15 @@
-#[macro_use]
-extern crate rocket;
-
 use std::fs;
 
-use rocket::{
-	response::content::{RawHtml, RawJavaScript},
-	routes,
-};
+use rocket::{fs::FileServer, response::content::RawHtml, routes};
 
-#[get("/")]
+#[rocket::get("/<_..>", rank = 5)]
 pub fn serve_app() -> RawHtml<fs::File> {
-	RawHtml(fs::File::open("../index.html").expect("error opening index.html"))
+    RawHtml(fs::File::open("../public/index.html").expect("error opening index.html"))
 }
 
-#[get("/planner.js")]
-pub fn serve_script() -> RawJavaScript<fs::File> {
-	RawJavaScript(fs::File::open("../app/bin/planner.js").expect("error opening planner.js"))
-}
-
-#[launch]
+#[rocket::launch]
 fn rocket() -> _ {
-	rocket::build().mount("/", routes![serve_app, serve_script])
+    rocket::build()
+        .mount("/public", FileServer::from("../public").rank(1))
+        .mount("/", routes![serve_app])
 }

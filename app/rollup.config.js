@@ -7,7 +7,7 @@ export default {
     input: "./src/index.ts",
     output: {
         format: "iife",
-        file: "bin/planner.js"
+        file: "../public/planner.js"
     },
     plugins: [
         sveltePlugin({
