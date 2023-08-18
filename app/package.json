@@ -1,0 +1,23 @@
+{
+  "name": "planner-app",
+  "version": "0.1.0",
+  "description": "frontend for planner app",
+  "main": "bin/index.js",
+  "repository": "https://github.com/suaviloquence/planner",
+  "author": "m",
+  "license": "AGPL-3.0-only",
+  "private": false,
+  "type": "module",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.0",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@tsconfig/svelte": "^5.0.0",
+    "rollup": "^3.28.0",
+    "rollup-plugin-svelte": "^7.1.6",
+    "svelte": "^4.2.0",
+    "svelte-check": "^3.5.0",
+    "svelte-preprocess": "^5.0.4",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6"
+  }
+}
