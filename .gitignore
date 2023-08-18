@@ -1,2 +1,3 @@
 app/node_modules/
-app/bin
+app/bin/
+server/target/
