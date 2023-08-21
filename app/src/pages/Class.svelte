@@ -5,18 +5,12 @@
 	export let department: string;
 	export let number: string;
 
-	// TODO: kinda hacky
-	let dept: string;
-	let num: string;
-	$: dept = department.toUpperCase();
-	$: num = number.toUpperCase();
-
 	let infoPromise: Promise<Class>;
-	$: infoPromise = $api.getClass({ department: dept, number: num });
+	$: infoPromise = $api.getClass({ department, number });
 </script>
 
 {#await infoPromise}
-	Loading {dept} {num}
+	Loading {department} {number}
 {:then info}
 	<h1>
 		<!-- use the canonical name when we have it. -->
