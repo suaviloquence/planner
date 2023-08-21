@@ -44,7 +44,7 @@ export class Api {
 					type: TermType.Fall,
 					year: 2023,
 					classes: [
-
+						_classes["CSE"]["20"],
 					],
 				},
 			],

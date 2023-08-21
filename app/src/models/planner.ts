@@ -1,19 +1,19 @@
 import type { Class } from "./class";
 
 export interface Planner {
-    terms: Term[],
+	terms: Term[],
 };
 
 export enum TermType {
-    Winter,
-    Spring,
-    // TODO: summer1, summer2?
-    Summer,
-    Fall
+	Winter = "Winter",
+	Spring = "Spring",
+	// TODO: summer1, summer2?
+	Summer = "Summer",
+	Fall = "Fall",
 }
 
 export interface Term {
-    type: TermType,
-    year: number,
-    classes: Class[],
+	type: TermType,
+	year: number,
+	classes: Class[],
 };

@@ -6,7 +6,10 @@
 	export let number: string;
 
 	let infoPromise: Promise<Class>;
-	$: infoPromise = $api.getClass({ department, number });
+	$: infoPromise = $api.getClass({ department, number }).then((cls) => {
+		console.dir(cls);
+		return cls;
+	});
 </script>
 
 {#await infoPromise}

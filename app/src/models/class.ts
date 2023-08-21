@@ -1,5 +1,5 @@
 export enum GeneralEducation {
-	MF,
+	MF = "MF",
 };
 
 export interface ClassCode {
